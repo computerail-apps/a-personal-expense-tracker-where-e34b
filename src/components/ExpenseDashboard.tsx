@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
-import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from '@/lib/ui/Card';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+import { Card, CardHeader, CardTitle, CardDescription, CardContent } from '@/lib/ui/Card';
 import { Input } from '@/lib/ui/Input';
 import { Button } from '@/lib/ui/Button';
 import { Badge } from '@/lib/ui/Badge';
@@ -38,8 +38,8 @@ export function ExpenseDashboard() {
 
   const addMutation = useMutation({
     mutationFn: async (newExp: { amount: number; note?: string }) => {
-      // placeholder, real implementation in phase 2
-      await new Promise((r) => setTimeout(r, 500));
+      // placeholder for real insert; will be wired in phase 2
+      return newExp;
     },
     onSuccess: () => {
       setAmount('');

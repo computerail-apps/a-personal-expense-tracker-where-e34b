@@ -1,4 +1,4 @@
-import { Nav, NavLink } from '@/lib/ui/Nav';
+import { Nav } from '@/lib/ui/Nav';
 import { Container } from '@/lib/ui/Container';
 import { Button } from '@/lib/ui/Button';
 import { ExpenseDashboard } from '@/components/ExpenseDashboard';
@@ -8,8 +8,8 @@ export default function App() {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Nav
-        brand={<span>SpendLog</span>}
-        actions={<Button size="sm"><DollarSign size={16} />Add Expense</Button>}
+        brand={<span className="text-h2 font-medium">SpendLog</span>}
+        actions={<Button size="sm"><DollarSign size={16} className="mr-2" />Add Expense</Button>}
       />
       <main className="py-8">
         <Container>
